@@ -65,10 +65,10 @@ const url =`https://api.openweathermap.org/data/2.5/weather?zip=${zip.value}&app
       getData(url)
        .then(
          (data) =>{
-   posting('/postall', {temp:data.main.temp, date:newDate, feeling:feel.value})
+   return posting('/postall', {temp:data.main.temp, date:newDate, feeling:feel.value})
  })
  .then(
-   retrieveData()
+   ()=> retrieveData()
  )
  }
 };

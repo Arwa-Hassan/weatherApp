@@ -28,7 +28,7 @@ const server = app.listen(port , ()=> {
 app.get('/all' , call1 ) ;
 // Callback function to complete GET '/all'
 function call1(req , res){
-  
+  res.send(projectData);
 };
 // Post Route
 app.post('/postall' , function (req , res){
